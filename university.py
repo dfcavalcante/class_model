@@ -1,9 +1,10 @@
 from department import Department
 
+
 class University:
-    def __init__(self, name):
+    def __init__(self, name, department: Department):
         self.name = name
-        self.departments = []
+        self.departments = [department]
 
     def add_department(self, department: Department):
         if len(self.departments) < 5:

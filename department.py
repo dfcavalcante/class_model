@@ -1,9 +1,9 @@
 from professor import Professor
 
 class Department:
-    def __init__(self, name):
+    def __init__(self, name, professor: Professor):
         self.name = name
-        self.professors = []
+        self.professors = [professor]
 
     def add_professor(self, professor: Professor):
         if len(self.professors) < 5:

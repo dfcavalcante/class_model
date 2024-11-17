@@ -3,20 +3,18 @@ from department import Department
 from professor import Professor
 from subject import Subject
 
-# Create university
-university = University("XYZ University")
-
-# Create departments
-dept1 = Department("Mathematics Department")
-dept2 = Department("Physics Department")
-
-# Add departments to university
-university.add_department(dept1)
-university.add_department(dept2)
-
 # Create professors
 prof1 = Professor("Dr. John")
 prof2 = Professor("Dr. Anna")
+
+# Create departments
+dept1 = Department("Mathematics Department", prof1)
+dept2 = Department("Physics Department", prof2)
+
+# Create university
+university = University("XYZ University", dept1)
+# Add departments to university
+university.add_department(dept2)
 
 # Add professors to department
 dept1.add_professor(prof1)
