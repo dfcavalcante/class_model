@@ -2,6 +2,7 @@ from subject import Subject
 
 
 class Professor:
+
     def __init__(self, name):
         self.name = name
         self.subjects = []
@@ -14,4 +15,4 @@ class Professor:
 
     def list_subjects(self):
         for sub in self.subjects:
-            print(f"Subject: {sub.name}")
+            print(f"Disciplina: {sub.name}")

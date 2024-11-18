@@ -1,17 +1,20 @@
+from numpy import character
+
 from department import Department
 
 
 class University:
-    def __init__(self, name, department: Department):
-        self.name = name
-        self.departments = [department]
+    departments: list[Department] = []
 
-    def add_department(self, department: Department):
-        if len(self.departments) < 5:
-            self.departments.append(department)
-        else:
-            print("The university already has the maximum number of departments.")
+    def __init__(self, name):
+        self.name = name
 
     def list_departments(self):
         for dept in self.departments:
-            print(f"Department: {dept.name}")
+            print(f"Departmento: {dept.name}")
+
+    def create_department(self, department: Department):
+        if len(self.departments) <= 5:
+            self.departments.append(department)
+        else:
+            print("Não dá para adicionar mais departamento")
